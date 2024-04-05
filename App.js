@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, Text, TouchableOpacity, Image } from 'react-native';
+import { SafeAreaView, View, Text, TouchableOpacity, Image, StatusBar, ScrollView } from 'react-native';
 
 export default function App() {
   const handlePressLinguagem = (linguagem) => {
@@ -52,6 +52,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems: 'center' }}>
+    <StatusBar />
       <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%' }}>
         <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Onde essas linguagens são utilizadas?</Text>
       </View>
@@ -94,9 +95,28 @@ export default function App() {
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
-      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'absolute', bottom: 0, justifyContent: 'center' }}>
-        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Smith Programações</Text>
+      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
+      <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold', marginTop: 10 }}>Veja mais linguagens:</Text>
       </View>
+      <ScrollView
+      horizontal={true}
+      contentContainerStyle={{flexGrow: 1, }}showsHorizontalScrollIndicator={false}>
+      <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, height:90, margin: 10, backgroundColor: 'lightblue',}} onPress={()=>alert("Esse é o Python(pitão), uma linguagem utilizada no Back-End. ")}>
+        <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+      </TouchableOpacity>
+      <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, height:90, margin: 10, backgroundColor: 'lightblue',}} onPress={()=>alert("Esse é a Kotlin, uma linguagem utilizada no desenvolvimento mobile para o sistema Android.")}>
+        <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+      </TouchableOpacity>
+      <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, height:90 , margin: 10, backgroundColor: 'lightblue',}} onPress={()=>alert("Essa é Swift, ao contrário da anterior, ela é utilizada no desenvolvimento de apps para o sistema IOS.")}>
+        <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+      </TouchableOpacity>
+      <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height:90, backgroundColor: 'lightblue',}} onPress={()=>alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
+        <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+      </TouchableOpacity>
+    </ScrollView>
+      {/*<View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'absolute', bottom: 0, justifyContent: 'center' }}>
+        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Smith Programações</Text>
+      </View>*/}
     </SafeAreaView>
   );
 }
