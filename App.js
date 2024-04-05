@@ -1,12 +1,7 @@
 import React from 'react';
 import { SafeAreaView, View, Text, TouchableOpacity, Image, StatusBar, ScrollView } from 'react-native';
-import useState from 'react';
 
 export default function App() {
-  const [menuVisible, setMenuVisible] = useState(false);
-  const handlePressMenu = () => {
-    setMenuVisible(!menuVisible);
-  };
 
   const handlePressLinguagem = (linguagem) => {
     switch (linguagem) {
@@ -64,17 +59,6 @@ export default function App() {
       <TouchableOpacity onPress={handlePressMenu} style={{ position: 'absolute', top: 20, left: 20 }}>
         <Image source={require("./assets/menu.png")} style={{ width: 25, height: 25 }} />
       </TouchableOpacity>
-      <Modal animationType="slide" transparent={true} visible={menuVisible} onRequestClose={() => { setMenuVisible(false);}}>
-  {/* Conteúdo do menu aqui */}
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-  <View style={{ backgroundColor: '#fff', padding: 20, borderRadius: 10 }}>
-    {/* Conteúdo do menu aqui */}
-    <Button title="Fechar" onPress={handlePressMenu} />
-  </View>
-</View>
-
-</Modal>
-
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('javascript')}>
           <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
