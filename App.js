@@ -1,7 +1,13 @@
 import React from 'react';
 import { SafeAreaView, View, Text, TouchableOpacity, Image, StatusBar, ScrollView } from 'react-native';
+import useState from 'react';
 
 export default function App() {
+  const [menuVisible, setMenuVisible] = useState(false);
+  const handlePressMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   const handlePressLinguagem = (linguagem) => {
     switch (linguagem) {
       case 'javascript':
@@ -51,72 +57,86 @@ export default function App() {
   };
 
   return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems: 'center' }}>
-        <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%' }}>
-          <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Onde essas linguagens são utilizadas?</Text>
-        </View>
-        <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('javascript')}>
-            <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('php')}>
-            <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('csharp')}>
-            <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
-          </TouchableOpacity>
-        </View>
-        <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
-          <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold', marginTop: 10 }}>Em quais matérias aprendemos cada linguagem?</Text>
-        </View>
-        <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('javascript')}>
-            <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('php')}>
-            <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
-            <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
-          </TouchableOpacity>
-        </View>
-        <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
-          <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold', marginTop: 15 }}>Site ou sistemas que utilizam tal linguagem:</Text>
-        </View>
-        <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('javascript')}>
-            <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('php')}>
-            <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('csharp')}>
-            <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
-          </TouchableOpacity>
-        </View>
-        <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
-          <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold', marginTop: 10 }}>Veja mais linguagens:</Text>
-        </View>
-        <ScrollView horizontal={true} contentContainerStyle={{ flexGrow: 1, }} showsHorizontalScrollIndicator={false}>
-          <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Esse é o Python(pitão), uma linguagem utilizada no Back-End. ")}>
-            <Image source={require("./assets/python.png")} style={{ width: '100%', height: '100%' }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Esse é a Kotlin, uma linguagem utilizada no desenvolvimento mobile para o sistema Android.")}>
-            <Image source={require("./assets/kotlin.png")} style={{ width: '100%', height: '100%' }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Essa é Swift, ao contrário da anterior, ela é utilizada no desenvolvimento de apps para o sistema IOS.")}>
-            <Image source={require("./assets/swift.png")} style={{ width: '100%', height: '100%' }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
-            <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%' }} />
-          </TouchableOpacity>
-          <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Essa é ruby, uma linguagem conhecida por sua sintaxe clara, flexível e expressiva.")}>
-            <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
-          </TouchableOpacity>
-        </ScrollView>
-        <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'absolute', bottom: 0, justifyContent: 'center' }}>
-          <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Smith Programações</Text>
-        </View>
-      </SafeAreaView>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems: 'center' }}>
+      <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%' }}>
+        <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Onde essas linguagens são utilizadas?</Text>
+      </View>
+      <TouchableOpacity onPress={handlePressMenu} style={{ position: 'absolute', top: 20, left: 20 }}>
+        <Image source={require("./assets/menu.png")} style={{ width: 25, height: 25 }} />
+      </TouchableOpacity>
+      <Modal animationType="slide" transparent={true} visible={menuVisible} onRequestClose={() => { setMenuVisible(false);}}>
+  {/* Conteúdo do menu aqui */}
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+  <View style={{ backgroundColor: '#fff', padding: 20, borderRadius: 10 }}>
+    {/* Conteúdo do menu aqui */}
+    <Button title="Fechar" onPress={handlePressMenu} />
+  </View>
+</View>
+
+</Modal>
+
+      <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('javascript')}>
+          <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('php')}>
+          <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('csharp')}>
+          <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+        </TouchableOpacity>
+      </View>
+      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
+        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold', marginTop: 10 }}>Em quais matérias aprendemos cada linguagem?</Text>
+      </View>
+      <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('javascript')}>
+          <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('php')}>
+          <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
+          <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+        </TouchableOpacity>
+      </View>
+      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
+        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold', marginTop: 15 }}>Site ou sistemas que utilizam tal linguagem:</Text>
+      </View>
+      <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('javascript')}>
+          <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('php')}>
+          <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('csharp')}>
+          <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+        </TouchableOpacity>
+      </View>
+      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
+        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold', marginTop: 10 }}>Veja mais linguagens:</Text>
+      </View>
+      <ScrollView horizontal={true} contentContainerStyle={{ flexGrow: 1, }} showsHorizontalScrollIndicator={false}>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Esse é o Python(pitão), uma linguagem utilizada no Back-End. ")}>
+          <Image source={require("./assets/python.png")} style={{ width: '100%', height: '100%' }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Esse é a Kotlin, uma linguagem utilizada no desenvolvimento mobile para o sistema Android.")}>
+          <Image source={require("./assets/kotlin.png")} style={{ width: '100%', height: '100%' }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Essa é Swift, ao contrário da anterior, ela é utilizada no desenvolvimento de apps para o sistema IOS.")}>
+          <Image source={require("./assets/swift.png")} style={{ width: '100%', height: '100%' }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
+          <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%' }} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Essa é ruby, uma linguagem conhecida por sua sintaxe clara, flexível e expressiva.")}>
+          <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
+        </TouchableOpacity>
+      </ScrollView>
+      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'absolute', bottom: 0, justifyContent: 'center' }}>
+        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Smith Programações</Text>
+      </View>
+    </SafeAreaView>
   );
 }
