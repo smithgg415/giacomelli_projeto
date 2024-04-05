@@ -119,7 +119,7 @@ export default function App() {
         </TouchableOpacity>
       </ScrollView>
       <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'absolute', bottom: 0, justifyContent: 'center' }}>
-        <Text style={{ textAlign: 'center', color: '#41C0F2', fontSize: 15, fontWeight: 'bold' }}>Smith Programações</Text>
+        <Text style={{ textAlign: 'center', color: 'black', fontSize: 15, fontWeight: 'bold' }}>Smith Programações</Text>
       </View>
     </SafeAreaView>
   );
