@@ -102,18 +102,18 @@ export default function App() {
       horizontal={true}
       contentContainerStyle={{flexGrow: 1, }}showsHorizontalScrollIndicator={false}>
       <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, height:90, margin: 10, backgroundColor: '#fff',}} onPress={()=>alert("Esse é o Python(pitão), uma linguagem utilizada no Back-End. ")}>
-        <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+        <Image source={require("./assets/python.png")} style={{ width: '100%', height: '100%' }} />
       </TouchableOpacity>
       <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, height:90, margin: 10, backgroundColor: '#fff',}} onPress={()=>alert("Esse é a Kotlin, uma linguagem utilizada no desenvolvimento mobile para o sistema Android.")}>
-        <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+        <Image source={require("./assets/kotlin.png")} style={{ width: '100%', height: '100%' }} />
       </TouchableOpacity>
       <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, height:90 , margin: 10, backgroundColor: '#fff',}} onPress={()=>alert("Essa é Swift, ao contrário da anterior, ela é utilizada no desenvolvimento de apps para o sistema IOS.")}>
-        <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+        <Image source={require("./assets/swift.png")} style={{ width: '100%', height: '100%' }} />
       </TouchableOpacity>
       <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height:90, backgroundColor: '#fff',}} onPress={()=>alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
-        <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+        <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%' }} />
       </TouchableOpacity>
-      <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height:90, backgroundColor: '#fff',}} onPress={()=>alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
+      <TouchableOpacity style={{flex: 1,justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height:90, backgroundColor: '#fff',}} onPress={()=>alert("Essa é ruby, uma linguagem conhecida por sua sintaxe clara, flexível e expressiva.")}>
         <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
       </TouchableOpacity>
     </ScrollView>
