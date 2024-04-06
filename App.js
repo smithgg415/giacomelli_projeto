@@ -55,6 +55,7 @@ export default function App() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems: 'center' }}>
       <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%' }}>
+        <StatusBar />
         <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Onde essas linguagens são utilizadas?</Text>
       </View>
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
