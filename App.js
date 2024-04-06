@@ -57,9 +57,6 @@ export default function App() {
       <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%' }}>
         <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Onde essas linguagens são utilizadas?</Text>
       </View>
-      <TouchableOpacity onPress={handlePressMenu} style={{ position: 'absolute', top: 20, left: 20 }}>
-        <Image source={require("./assets/menu.png")} style={{ width: 25, height: 25 }} />
-      </TouchableOpacity>
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('javascript')}>
           <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
@@ -79,7 +76,7 @@ export default function App() {
           <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('php')}>
-          <Icon name="graduation-cap" size={50} color="#900" /> {/* Adicionando o ícone comentado */}
+          <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
