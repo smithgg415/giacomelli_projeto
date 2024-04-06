@@ -79,8 +79,7 @@ export default function App() {
           <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('php')}>
-          {/*<Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />*/}
-          <Icon name="rocket" size={30} color="#900" />
+          <Icon name="graduation-cap" size={50} color="#900" /> {/* Adicionando o ícone comentado */}
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
