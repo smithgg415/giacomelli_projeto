@@ -53,10 +53,13 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems: 'center' }}>
-      <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%' }}>
-        <StatusBar />
-        <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Onde essas linguagens são utilizadas?</Text>
+    <ScrollView style={{ flex: 1, backgroundColor: '#fff' }}>
+      <StatusBar />
+      <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%', flexDirection: "row" }}>
+        {/*<Icon name="arrow-left" size={20} color="white"/>*/}
+        <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold', marginLeft: 50 }}>
+          Onde essas linguagens são utilizadas?
+        </Text>
       </View>
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('javascript')}>
@@ -117,9 +120,11 @@ export default function App() {
           <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </ScrollView>
-      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'absolute', bottom: 0, justifyContent: 'center' }}>
-        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold' }}>Smith Programações</Text>
+      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'fixed', bottom: 0, justifyContent: 'space-around', flexDirection: "row" }}>
+        <Icon name="home" size={35} color="#fff" onPress={() => alert("Não funcional")} style={{ marginTop: 5 }} />
+        <Icon name="folder" size={35} color="#fff" onPress={() => alert("Não funcional")} style={{ marginTop: 5 }} />
+        <Icon name="user" size={35} color="#fff" onPress={() => alert("Não funcional")} style={{ marginTop: 5 }} />
       </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 }
