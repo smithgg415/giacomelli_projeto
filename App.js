@@ -1,7 +1,21 @@
 import React from 'react';
 import { SafeAreaView, View, Text, TouchableOpacity, Image, StatusBar, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Account from './Account';
 
+const Stack = createStackNavigator();
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="NovaPagina" component={NovaPagina} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 export default function App() {
 
   const handlePressLinguagem = (linguagem) => {
@@ -53,7 +67,7 @@ export default function App() {
   };
 
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: '#fff' }}>
+    <SafeAreaView style={{ alignItems:"center", flex: 1, backgroundColor: '#fff' }}>
       <StatusBar />
       <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%', flexDirection: "row" }}>
         {/*<Icon name="arrow-left" size={20} color="white"/>*/}
@@ -123,8 +137,8 @@ export default function App() {
       <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'fixed', bottom: 0, justifyContent: 'space-around', flexDirection: "row" }}>
         <Icon name="home" size={35} color="#fff" onPress={() => alert("Não funcional")} style={{ marginTop: 5 }} />
         <Icon name="folder" size={35} color="#fff" onPress={() => alert("Não funcional")} style={{ marginTop: 5 }} />
-        <Icon name="user" size={35} color="#fff" onPress={() => alert("Não funcional")} style={{ marginTop: 5 }} />
+        <Icon name="user" size={35} color="#fff" onPress={() => navigation.navigate('Account')} style={{ marginTop: 5 }} />
       </View>
-    </ScrollView>
+    </SafeAreaView>
   );
 }
