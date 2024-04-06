@@ -1,5 +1,6 @@
 import React from 'react';
 import { SafeAreaView, View, Text, TouchableOpacity, Image, StatusBar, ScrollView } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function App() {
 
@@ -78,7 +79,8 @@ export default function App() {
           <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('php')}>
-          <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
+          {/*<Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />*/}
+          <Icon name="rocket" size={30} color="#900" />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
