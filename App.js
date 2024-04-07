@@ -1,13 +1,8 @@
 import React from 'react';
-import { SafeAreaView, View, Text, TouchableOpacity, Image, StatusBar, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StatusBar, ScrollView, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer, withNavigation } from '@react-navigation/native';
-import Account from './Account';
 
-const Stack = createStackNavigator();
-
-const App = ({ navigation }) => {
+export default function App() {
 
   const handlePressLinguagem = (linguagem) => {
     switch (linguagem) {
@@ -58,9 +53,10 @@ const App = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={{ alignItems:"center", flex: 1, backgroundColor: '#fff' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
       <StatusBar />
       <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%', flexDirection: "row" }}>
+        {/*<Icon name="arrow-left" size={20} color="white"/>*/}
         <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold', marginLeft: 50 }}>
           Onde essas linguagens são utilizadas?
         </Text>
@@ -118,19 +114,17 @@ const App = ({ navigation }) => {
           <Image source={require("./assets/swift.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
-          <Image source={require("./assets/python.png")} style={{ width: '100%', height: '100%' }} />
+          <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Essa é ruby, uma linguagem conhecida por sua sintaxe clara, flexível e expressiva.")}>
           <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </ScrollView>
       <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'fixed', bottom: 0, justifyContent: 'space-around', flexDirection: "row" }}>
-        <Icon name="home" size={35} color="#fff" onPress={() => alert("Não funcional")} style={{ marginTop: 5 }} />
-        <Icon name="folder" size={35} color="#fff" onPress={() => alert("Não funcional")} style={{ marginTop: 5 }} />
-        <Icon name="user" size={35} color="#fff" onPress={() => navigation.navigate('Account')} style={{ marginTop: 5 }} />
+        <Icon name="home" size={35} color="#fff" style={{ marginTop: 5 }} />
+        <Icon name="folder" size={35} color="#fff" style={{ marginTop: 5 }} />
+        <Icon name="user" size={35} color="#fff" style={{ marginTop: 5 }} />
       </View>
     </SafeAreaView>
   );
 }
-
-export default withNavigation(App);
