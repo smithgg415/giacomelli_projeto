@@ -53,7 +53,7 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems:"center" }}>
       <StatusBar />
       <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%', flexDirection: "row" }}>
         {/*<Icon name="arrow-left" size={20} color="white"/>*/}
@@ -68,7 +68,7 @@ export default function App() {
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('php')}>
           <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('csharp')}>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#fff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
@@ -82,7 +82,7 @@ export default function App() {
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('php')}>
           <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#fff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
@@ -96,12 +96,12 @@ export default function App() {
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('php')}>
           <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#007bff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('csharp')}>
+        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#fff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
       <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
-        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 15, fontWeight: 'bold', marginTop: 10 }}>Veja mais linguagens:</Text>
+        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 17, fontWeight: 'bold', marginTop: 10 }}>Veja mais linguagens:</Text>
       </View>
       <ScrollView horizontal={true} contentContainerStyle={{ flexGrow: 1, }} showsHorizontalScrollIndicator={false}>
         <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Esse é o Python(pitão), uma linguagem utilizada no Back-End. ")}>
@@ -120,7 +120,7 @@ export default function App() {
           <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </ScrollView>
-      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'fixed', bottom: 0, justifyContent: 'space-around', flexDirection: "row" }}>
+      <View style={{ width: '100%', backgroundColor: "#007bff", height: 50, position: 'fixed', bottom: 0, justifyContent: 'space-around', flexDirection: "row" }}>
         <Icon name="home" size={35} color="#fff" style={{ marginTop: 5 }} />
         <Icon name="folder" size={35} color="#fff" style={{ marginTop: 5 }} />
         <Icon name="user" size={35} color="#fff" style={{ marginTop: 5 }} />
