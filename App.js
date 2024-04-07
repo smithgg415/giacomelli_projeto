@@ -53,7 +53,7 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems:"center" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems: "center" }}>
       <StatusBar />
       <View style={{ backgroundColor: '#007bff', padding: 20, alignItems: 'center', width: '100%', flexDirection: "row" }}>
         {/*<Icon name="arrow-left" size={20} color="white"/>*/}
@@ -100,8 +100,9 @@ export default function App() {
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
-      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
-        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 17, fontWeight: 'bold', marginTop: 10 }}>Veja mais linguagens:</Text>
+      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 10, flexDirection:"row", justifyContent:"space-around" }}>
+        <Text style={{ textAlign: 'center', color: '#fff', fontSize: 17, fontWeight: 'bold', marginTop: 15 }}>Veja mais linguagens:</Text>
+        {/*<Icon name="arrow-right" size={20} color="#fff" style={{marginTop:15}}/>*/}
       </View>
       <ScrollView horizontal={true} contentContainerStyle={{ flexGrow: 1, }} showsHorizontalScrollIndicator={false}>
         <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Esse é o Python(pitão), uma linguagem utilizada no Back-End. ")}>
@@ -114,7 +115,7 @@ export default function App() {
           <Image source={require("./assets/swift.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
-          <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%' }} />
+          <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%', borderRadius:10 }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Essa é ruby, uma linguagem conhecida por sua sintaxe clara, flexível e expressiva.")}>
           <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
