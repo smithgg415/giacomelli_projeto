@@ -54,7 +54,27 @@ export default function App() {
         break;
     }
   };
-
+  const handlePressLinha = (linguagem) => {
+    switch (linguagem) {
+      case 'python':
+        alert('Essa é Python, uma linguagem utilizada no Back-End.');
+        break;
+      case 'kotlin':
+        alert('Essa é kotlin, uma linguagem utilizada no desenvolvimento de apps para o sistema Android.');
+        break;
+      case 'swift':
+        alert('Ao contrário da anterior, a linguagem swift é utilizada no desenvolvimento de apps para o sistema IOS.');
+        break;
+      case 'typescript':
+        alert("Esse é o typescript, muito utilizado no Front-End. Porém, pode ser utilizado no Back-End com Node.");
+        break;
+      case 'ruby':
+        alert("Essa é Ruby, uma linguagem conhecida por sua sintaxe clara e expressiva.")
+        break;
+      default:
+        break;
+    }
+  }
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#fff', alignItems: "center" }}>
       <StatusBar />
@@ -108,19 +128,19 @@ export default function App() {
         {/*<Icon name="arrow-right" size={20} color="#fff" style={{marginTop:15}}/>*/}
       </View>
       <ScrollView horizontal={true} contentContainerStyle={{ flexGrow: 1, }} showsHorizontalScrollIndicator={false}>
-        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Esse é o Python(pitão), uma linguagem utilizada no Back-End. ")}>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff' }} onPress={() => handlePressLinha('python')}>
           <Image source={require("./assets/python.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Esse é a Kotlin, uma linguagem utilizada no desenvolvimento mobile para o sistema Android.")}>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff' }} onPress={() => handlePressLinha('kotlin')}>
           <Image source={require("./assets/kotlin.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff', }} onPress={() => alert("Essa é Swift, ao contrário da anterior, ela é utilizada no desenvolvimento de apps para o sistema IOS.")}>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, height: 90, margin: 10, backgroundColor: '#fff' }} onPress={() => handlePressLinha('swift')}>
           <Image source={require("./assets/swift.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff' }} onPress={() => handlePressLinha('typescript')}>
           <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Essa é ruby, uma linguagem conhecida por sua sintaxe clara, flexível e expressiva.")}>
+        <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff' }} onPress={() => handlePressLinha('ruby')}>
           <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </ScrollView>
