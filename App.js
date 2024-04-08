@@ -68,7 +68,7 @@ export default function App() {
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('php')}>
           <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#fff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('csharp')}>
+        <TouchableOpacity style={{ width: 100, height: 100, margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
@@ -82,7 +82,7 @@ export default function App() {
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('php')}>
           <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#fff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
+        <TouchableOpacity style={{ width: 100, height: 100, margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
@@ -96,7 +96,7 @@ export default function App() {
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('php')}>
           <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
-        <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#fff', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('csharp')}>
+        <TouchableOpacity style={{ width: 100, height: 100, margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('csharp')}>
           <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
