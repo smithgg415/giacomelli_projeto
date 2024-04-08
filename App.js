@@ -1,6 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, StatusBar, ScrollView, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import js from "./assets/js.png";
+import php from "./assets/php.png";
+import csharp from "./assets/c.png";
 
 export default function App() {
 
@@ -63,13 +66,13 @@ export default function App() {
       </View>
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('javascript')}>
-          <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
+          <Image source={js} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('php')}>
-          <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
+          <Image source={php} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressLinguagem('csharp')}>
-          <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+          <Image source={csharp} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
       <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
@@ -77,13 +80,13 @@ export default function App() {
       </View>
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('javascript')}>
-          <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
+          <Image source={js} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('php')}>
-          <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
+          <Image source={php} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressMateria('csharp')}>
-          <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+          <Image source={csharp} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
       <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 20 }}>
@@ -91,16 +94,16 @@ export default function App() {
       </View>
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#FFF000', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('javascript')}>
-          <Image source={require("./assets/js.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
+          <Image source={js} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, backgroundColor: '#4B0082', margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('php')}>
-          <Image source={require("./assets/php.png")} style={{ width: 95, height: '70%' }} />
+          <Image source={php} style={{ width: 95, height: '70%' }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ width: 100, height: 100, margin: 10, justifyContent: 'center', alignItems: 'center', borderRadius: 10 }} onPress={() => handlePressEmpresa('csharp')}>
-          <Image source={require("./assets/c.png")} style={{ width: '100%', height: '100%' }} />
+          <Image source={csharp} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </View>
-      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 10, flexDirection:"row", justifyContent:"space-around" }}>
+      <View style={{ width: '100%', backgroundColor: '#007bff', height: 50, position: 'relative', marginTop: 10, flexDirection: "row", justifyContent: "space-around" }}>
         <Text style={{ textAlign: 'center', color: '#fff', fontSize: 17, fontWeight: 'bold', marginTop: 15 }}>Veja mais linguagens:</Text>
         {/*<Icon name="arrow-right" size={20} color="#fff" style={{marginTop:15}}/>*/}
       </View>
@@ -115,7 +118,7 @@ export default function App() {
           <Image source={require("./assets/swift.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Esse é o TypeScript, geralmente é usado no Front-End. Pode ser usado no Back-End com o Node.")}>
-          <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%', borderRadius:10 }} />
+          <Image source={require("./assets/typescript.png")} style={{ width: '100%', height: '100%', borderRadius: 10 }} />
         </TouchableOpacity>
         <TouchableOpacity style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: 90, margin: 10, height: 90, backgroundColor: '#fff', }} onPress={() => alert("Essa é ruby, uma linguagem conhecida por sua sintaxe clara, flexível e expressiva.")}>
           <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
