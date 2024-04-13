@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, StatusBar, ScrollView, SafeAreaView } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+
+import Router from './Router';
 import js from "./assets/js.png";
 import php from "./assets/php.png";
 import csharp from "./assets/c.png";
@@ -144,11 +145,6 @@ export default function App() {
           <Image source={require("./assets/ruby.png")} style={{ width: '100%', height: '100%' }} />
         </TouchableOpacity>
       </ScrollView>
-      <View style={{ width: '100%', backgroundColor: "#007bff", height: 50, position: 'fixed', bottom: 0, justifyContent: 'space-around', flexDirection: "row" }}>
-        <Icon name="home" size={35} color="#fff" style={{ marginTop: 5 }} />
-        <Icon name="folder" size={35} color="#fff" style={{ marginTop: 5 }} />
-        <Icon name="user" size={35} color="#fff" style={{ marginTop: 5 }} />
-      </View>
     </SafeAreaView>
   );
 }
